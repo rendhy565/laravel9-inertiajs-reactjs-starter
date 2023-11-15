@@ -33,6 +33,14 @@ export default function Sidebar() {
                             <span className="nav-link-text ms-1">Profile</span>
                         </Link>
                     </li>
+                    <li className="nav-item">
+                    <Link className={`${route().current('blank') && 'active'} nav-link`} href={route('blank')}>
+    <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+        <i className="ni ni-single-copy-04 text-primary text-sm opacity-10" />
+    </div>
+    <span className="nav-link-text ms-1">Blank Page</span>
+</Link>
+        </li>
                     <li className="nav-item mt-3">
                         <h6 className="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Manage</h6>
                     </li>                    

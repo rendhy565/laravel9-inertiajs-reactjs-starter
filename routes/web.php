@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlankPageController;
 
 Route::get('/', HomeController::class)->name('home');
 
@@ -30,4 +31,6 @@ Route::middleware('guest')->group(function () {
     Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
     Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 });
+
+Route::get('/blank', [BlankPageController::class, 'index'])->name('blank');
 
